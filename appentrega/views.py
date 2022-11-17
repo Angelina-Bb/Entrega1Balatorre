@@ -7,13 +7,13 @@ def inicio(request):
     return HttpResponse('Bienvenido a la drogueria')
     
 def productos(request):
-    return HttpResponse('Estas en productos')
+    return HttpResponse('Estas en productos.')
 
 def carrito(request):
-    return HttpResponse('Estas en el carrito')
+    return HttpResponse('Estas en el carrito.')
 
 def pedidos(request):
-    return HttpResponse('Estas en pedidos')
+    return HttpResponse('Estas en pedidos.')
 
 def contacto(request):
-    return HttpResponse('Estas en contacto')
+    return HttpResponse('Estas en contacto.')
