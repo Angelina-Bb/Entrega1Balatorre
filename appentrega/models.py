@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Producto(models.Model):
     nombre = models.CharField(max_length=30)
-    laboratorio = models.CharField()
+    laboratorio = models.CharField(max_length=30)
     codigo = models.IntegerField()
     stock = models.IntegerField()
 
@@ -12,6 +12,5 @@ class Carrito(models.Model):
     cantidad = models.IntegerField()
 
 class Pedido(models.Model):
-    factura = models.CharField
-    cant_prod = models.CharField
-    
+    factura = models.IntegerField
+    cant_prod = models.IntegerField
