@@ -55,7 +55,7 @@ ROOT_URLCONF = 'entrega1balatorre.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'\appentrega\templates'],
+        'DIRS': [r'\appentrega\templates\appentrega'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -7,7 +7,7 @@ import os
 
 def inicio(request):
     ruta = os.path.abspath(os.path.curdir)
-    ruta_completa = ruta + r'\appentrega\templates\index.html'
+    ruta_completa = ruta + r'\appentrega\templates\appentrega\index.html'
     archivo = open(ruta_completa)
     plantilla = Template(archivo.read())
     archivo.close()
@@ -16,7 +16,7 @@ def inicio(request):
     return HttpResponse(documento)
 
 def productos(request):
-    return HttpResponse('Estas en productos.')
+    return render(request, r'appentrega/productos.html')
 
 def carrito(request):
     return HttpResponse('Estas en el carrito.')
