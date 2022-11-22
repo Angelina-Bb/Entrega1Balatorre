@@ -32,53 +32,9 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2">Bienvenido a la tienda Drogueria Root</h1>
-                            <p class="lead text-white-50 mb-4">Para empezar tu busqueda</p>
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Escribe la marca o codigo de barras" aria-label="escribe la marca o codigo de barras" aria-describedby="btnNavbarSearch" />
-                                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search">Buscar</i></button>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Features section-->
-        <section class="py-5 border-bottom" id="features">
-            <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="h4 fw-bolder">Subir archivo</h2>
-                        <p>Sube tu archivo para generar de forma mas sencilla y rapida tu pedido de tu farmacia.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Subir archivo
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="h4 fw-bolder">Pedidos</h2>
-                        <p>Espacio para consultas sobre el estado de los pedidos mas recientes, facturas y remitos.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Consultar
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <h2 class="h4 fw-bolder">Contacto</h2>
-                        <p>Formulario para comunicarte con nosotros sobre devoluciones, reclamos, trazabilidad y otros motivos administrativos.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Quiero comunicarme
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% block contenido %}
+
+        {% endblock %}
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Angelina Balatorre 2022</p></div>

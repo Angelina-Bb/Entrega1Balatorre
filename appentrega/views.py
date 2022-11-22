@@ -16,7 +16,14 @@ def inicio(request):
     return HttpResponse(documento)
 
 def productos(request):
-    return render(request, 'appentrega/productos.html')
+    ruta = os.path.abspath(os.path.curdir)
+    ruta_completa = ruta + r'\appentrega\templates\appentrega\productos.html'
+    archivo = open(ruta_completa)
+    plantilla = Template(archivo.read())
+    archivo.close()
+    contexto = Context()
+    documento = plantilla.render(contexto)
+    return HttpResponse(documento)
 
 def carrito(request):
     return HttpResponse('Estas en el carrito.')
@@ -25,4 +32,11 @@ def pedidos(request):
     return HttpResponse('Estas en pedidos.')
 
 def contacto(request):
-    return HttpResponse('Estas en contacto.')
+    ruta = os.path.abspath(os.path.curdir)
+    ruta_completa = ruta + r'\appentrega\templates\appentrega\contacto.html'
+    archivo = open(ruta_completa)
+    plantilla = Template(archivo.read())
+    archivo.close()
+    contexto = Context()
+    documento = plantilla.render(contexto)
+    return HttpResponse(documento)
