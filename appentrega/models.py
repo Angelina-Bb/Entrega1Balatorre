@@ -6,7 +6,7 @@ class Producto(models.Model):
     droga = models.CharField(max_length=25)
     laboratorio = models.CharField(max_length=30)
     codigo = models.IntegerField()
-    stock = models.IntegerField()
+    stock = models.BooleanField()
 
 class Carrito(models.Model):
     nombre = models.CharField(max_length=30)

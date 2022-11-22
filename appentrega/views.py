@@ -16,7 +16,7 @@ def inicio(request):
     return HttpResponse(documento)
 
 def productos(request):
-    return render(request, r'appentrega/productos.html')
+    return render(request, 'appentrega/productos.html')
 
 def carrito(request):
     return HttpResponse('Estas en el carrito.')
