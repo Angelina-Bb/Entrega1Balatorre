@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Template, Context
-from django.template import loader
+from appentrega.models import *
 import os
 
 def inicio(request):
@@ -23,6 +23,13 @@ def productos(request):
     contexto = Context()
     documento = plantilla.render(contexto)
     return HttpResponse(documento)
+
+def form_productos(request):
+    if request.method == 'GET':
+        producto = Producto(request.GET['cliente'], request.GET['email'], request.GET['nombre'], request.GET['droga'], request.GET['laboratorio'], request.GET['codigo'], request.GET['stock'], request.GET['precio'])
+        producto.save()
+        return render(request, "appentrega/pedidos.html")
+    return render(request, )
 
 def carrito(request):
     ruta = os.path.abspath(os.path.curdir)
