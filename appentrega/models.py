@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Producto(models.Model):
+    cliente = models.CharField(max_length=25)
+    email = models.EmailField()
     nombre = models.CharField(max_length=30)
     droga = models.CharField(max_length=25)
     laboratorio = models.CharField(max_length=30)
@@ -22,8 +24,7 @@ class Pedido(models.Model):
     total = models.IntegerField()
 
 class Contacto(models.Model):
-    nombre = models.CharField(max_length=25)
-    apellido = models.CharField(max_length=25)
+    cliente = models.CharField(max_length=25)
     telefono = models.IntegerField()
     email = models.EmailField()
     motivo = models.CharField(max_length=25)

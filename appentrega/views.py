@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.template import Template, Context
 from django.template import loader
 import os
-# Create your views here.
 
 def inicio(request):
     ruta = os.path.abspath(os.path.curdir)
@@ -26,10 +25,24 @@ def productos(request):
     return HttpResponse(documento)
 
 def carrito(request):
-    return HttpResponse('Estas en el carrito.')
+    ruta = os.path.abspath(os.path.curdir)
+    ruta_completa = ruta + r'\appentrega\templates\appentrega\carrito.html'
+    archivo = open(ruta_completa)
+    plantilla = Template(archivo.read())
+    archivo.close()
+    contexto = Context()
+    documento = plantilla.render(contexto)
+    return HttpResponse(documento)
 
 def pedidos(request):
-    return HttpResponse('Estas en pedidos.')
+    ruta = os.path.abspath(os.path.curdir)
+    ruta_completa = ruta + r'\appentrega\templates\appentrega\pedidos.html'
+    archivo = open(ruta_completa)
+    plantilla = Template(archivo.read())
+    archivo.close()
+    contexto = Context()
+    documento = plantilla.render(contexto)
+    return HttpResponse(documento)
 
 def contacto(request):
     ruta = os.path.abspath(os.path.curdir)
